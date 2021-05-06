@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+.main{
+    background-color: black;
+    width: 100vmax;
+    height: 100vmax;
+    position: absolute;
+    overflow: hidden;
+}
+.premain{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform-style: preserve-3d;
+    animation-name: boxrotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.prebox{
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 250px;
+}
+.rotbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.left{
+    background-color: rgb(228, 150, 87);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 0% 0%;
+    transform: rotateY(-90deg) translateX(-2.5vmax);
+    /* opacity: .7; */
+}
+.right{
+    background-color: rgb(172, 247, 169);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 100% 0%;
+    transform: rotateY(90deg) translateX(2.5vmax);;
+    /* opacity: .7; */
+}
+.top{
+    background-color: rgb(181, 169, 247);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 0% 0%;
+    transform: rotateX(90deg) translateY(-2.5vmax);;
+    /* opacity: .7; */
+}
+.bottom{
+    background-color: rgb(247, 222, 169);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 0% 100%;
+    transform: rotateX(-90deg) translateY(2.5vmax);;
+    /* opacity: .7; */
+}
+.down{
+    background-color: rgb(169, 247, 243);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-2.5vmax);
+    /* opacity: .7; */
+}
+.up{
+    background-color: rgb(247, 169, 205);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 0% 0%;
+    transform: translateZ(2.5vmax);
+    /* opacity: .7; */
+}
+
+
+@keyframes boxrotate {
+    0%{
+        transform: rotateY(0deg) rotateX(0deg);
+
+    }
+    100%{
+        transform: rotateY(360deg) rotateX(360deg);
+        
+    }
+}
+
